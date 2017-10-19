@@ -1,7 +1,15 @@
 
 
-	document.getElementById("youlose").addEventListener("mouseover",changeWallColour) 
+//Exercise 1 Solution...
+window.onload = function(){ 
 
-function changeWallColour(){  
-	document.getEleme
-}
+ let wall= document.getElementById("boundary1"); 
+
+	wall.addEventListener("mouseover", changeWall); 
+
+	function changeWall(){ 
+		document.getElementById("boundary1").classList.add("youlose"); 
+	} 
+
+
+	
