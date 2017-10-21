@@ -29,7 +29,7 @@ window.onload = function (){
 
  } 
 
-
+/*
  //Exercise 3 Solution.... 
  window.onload = function (){  
 
@@ -67,4 +67,52 @@ window.onload = function (){
 
  	
 
- }  
+ }   */ 
+
+
+//Exercise 4 Solution...
+ window.onload = function(){ 
+
+  	
+
+  	let touchWall = false; 
+
+ 
+ 	let walls= document.querySelectorAll("#maze div.boundary");  
+	
+ 		for (var i=0; i<walls.length; i++){
+
+ 			walls[i].addEventListener("mouseover", function(){ 
+ 				
+ 				for (var x=0; x<walls.length; x++){ 
+ 				walls[x].classList.add("youlose");  
+ 				 
+ 				}    
+ 				alert("You Lose"); 
+ 				touchWall = true; 
+ 			}); 
+          
+ 		}  
+
+ 
+ 	let finishM = document.querySelector("#maze #end");  
+ 	finishM.addEventListener("mouseover", function (){  
+
+ 		if (touchWall ===true ){ 
+ 			alert("No cheating"); 
+ 		} else{ 
+ 			alert("You Win");
+ 		}
+ 		 	
+ 		
+ 	});  
+
+ 	let start = document.getElementById("start");  
+ 	let wall=document.getElementsByClassName("boundary");  
+
+ 		start.addEventListener("click", function() { 
+		location.reload(); 
+
+  	}); 
+
+ }
